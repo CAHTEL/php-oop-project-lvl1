@@ -18,11 +18,10 @@ class ArraySchema extends BaseSchema
         $this->addCheck('shape', $fn);
         return $this;
     }
-    
+
     public function sizeof(int $size): ArraySchema
     {
         $this->addCheck('sizeof', $size);
         return $this;
     }
 }
-

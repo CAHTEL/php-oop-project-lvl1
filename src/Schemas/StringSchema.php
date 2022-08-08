@@ -9,13 +9,13 @@ class StringSchema extends BaseSchema
         $this->addCheck('contains', $substr);
         return $this;
     }
-    
+
     public function minLength(int $length): StringSchema
     {
         $this->addCheck('minLength', $length);
         return $this;
     }
-    
+
     public function length(string $substr): StringSchema
     {
         $this->addCheck('length', $substr);

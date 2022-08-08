@@ -1,5 +1,7 @@
 <?php
 
+namespace Hexlet\Validator\Tests;
+
 use Hexlet\Validator\Validator;
 use PHPUnit\Framework\TestCase;
 
@@ -9,16 +11,16 @@ class NumberSchemaTest extends TestCase
     {
         $validator = new Validator();
         $schema = $validator->number();
-    
+
         $this->assertTrue($schema->isValid(null));
         $this->assertTrue($schema->isValid(5));
-    
+
         $schema->required();
-    
+
         $this->assertFalse($schema->isValid(null));
         $this->assertTrue($schema->isValid(5));
     }
-    
+
     public function testRange()
     {
         $validator = new Validator();
@@ -27,7 +29,7 @@ class NumberSchemaTest extends TestCase
         $this->assertTrue($schema->isValid(5));
         $this->assertFalse($schema->isValid(-6));
     }
-    
+
     public function testPositive()
     {
         $validator = new Validator();

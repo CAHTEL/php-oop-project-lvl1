@@ -9,7 +9,7 @@ class NumberSchema extends BaseSchema
         $this->addCheck('positive');
         return $this;
     }
-    
+
     public function range(int $min, int $max): NumberSchema
     {
         $this->addCheck('range', $min, $max);
