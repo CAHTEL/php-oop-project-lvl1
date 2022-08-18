@@ -8,6 +8,9 @@ class ArraySchema extends BaseSchema
     {
         $fn = function ($value) use ($schemas): bool {
             foreach ($schemas as $key => $schema) {
+                if (!array_key_exists($key, $value)) {
+                    return false;
+                }
                 $v = $value[$key];
                 if (!$schema->isValid($v)) {
                     return false;
