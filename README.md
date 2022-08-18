@@ -1,3 +1,6 @@
+
+Data validator is a library with which you can check the correctness of any data. The project is based on the yup library.
+
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/CAHTEL/php-oop-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/CAHTEL/php-oop-project-lvl1/actions)
 [![Actions Status](https://github.com/CAHTEL/php-oop-project-lvl1/actions/workflows/main.yml/badge.svg)](https://github.com/CAHTEL/php-oop-project-lvl1/actions)
@@ -10,3 +13,13 @@
 $ git clone https://github.com/CAHTEL/php-oop-project-lvl1.git
 
 $ make install
+```
+
+
+# Usage
+```
+$validator = new Validator();
+$schema = $v->string();
+$schema->required();
+$schema->isValid('test string')
+```
