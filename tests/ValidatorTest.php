@@ -24,11 +24,11 @@ class ValidatorTest extends TestCase
 
         $this->assertTrue($schema->minLength(5)->isValid('hexlet'));
         $this->assertFalse($schema->minLength(10)->isValid('hexlet'));
-    
+
         $this->assertTrue($schema->contains('what')->isValid('what does the fox say'));
         $this->assertFalse($schema->contains('whatthe')->isValid('what does the fox say'));
     }
-    
+
     public function testArrayValidator()
     {
         $validator = new Validator();
